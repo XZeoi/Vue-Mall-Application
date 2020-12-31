@@ -39,7 +39,7 @@ export default {
     },
     moveRadio: {
       type: Number,
-      default: 0.5,
+      default: 0.25,
     },
   },
   data() {

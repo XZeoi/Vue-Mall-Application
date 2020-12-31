@@ -13,15 +13,17 @@
 </template>
 
 <script>
-import Swiper from 'common/swiper/Swiper'
-import SwiperItem from 'common/swiper/SwiperItem'
+import {Swiper, SwiperItem} from 'common/swiper'
+
 
 export default {
   name: "HomeSwiper",
   props: {
     banners: {
       type: Array,
-      default: []
+      default: function(){
+        return []
+      }
     }
   },
   components: {
