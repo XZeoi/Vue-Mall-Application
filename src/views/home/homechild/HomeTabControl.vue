@@ -1,6 +1,7 @@
 <template>
   <div>
-    <tab-control :titleArray="titleArray">
+    <tab-control :titleArray="titleArray" @tabClick="tabClick">
+    <!-- <tab-control :titleArray="titleArray" @tabClick="tabClick"> -->
     </tab-control>
   </div>
 </template>
@@ -19,6 +20,11 @@ export default {
   },
   components: {
     TabControl
+  },
+  methods: {
+    tabClick(index) {
+      this.$emit('tabClick',index)
+    }
   }
 }
 </script>

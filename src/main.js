@@ -9,6 +9,22 @@ import axios from 'axios'
 
 Vue.prototype.$axios = axios
 
+Vue.filter('showFrontPrice', function(value) {
+  let price = value.split('.')[0]
+  return price
+})
+Vue.filter('showBackPrice', function(value) {
+  let price = value.split('.')[1]
+  return `.${price}`
+})
+Vue.filter('handleNumber', function(value) {
+  if(value < 9999) {
+    return value
+  }
+  let num = (value/10000).toFixed(1)
+  return `${num}万`
+})
+
 Vue.config.productionTip = false
 
 new Vue({
