@@ -4,7 +4,7 @@
       class="tab-item"
       v-for="(item, index) in titleArray"
       :key="index"
-      @click="itemClick(index)"      
+      @click="itemClick(index,currentIndex)"      
     >
       <span :class="{ active: currentIndex === index }">
         {{ item }}
